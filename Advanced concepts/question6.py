@@ -1,0 +1,6 @@
+f=open("six.txt","r")
+f1=f.read()
+new_content=f1.replace(".",".\n")
+f=open("six.txt","w")
+f.write(new_content)
+print("updated the file")

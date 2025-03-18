@@ -1,0 +1,1 @@
+Python is a OOP, with polymorphism and inheritance. A class construction is a method declare as def __init__(self): A destructor is def __del__(self): . A toString is def _str__(): Class definitions, like function definitions (def statements) must be executed before they have any effect.

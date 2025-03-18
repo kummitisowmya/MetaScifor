@@ -1,0 +1,7 @@
+height=float(input("enter your height:"))
+weight=float(input("enter your height:"))
+date=input("enter date:")
+bmi=weight/(height**2)
+f=open("bmi.txt","a")
+f.write(f"date;{date},height:{height},weight:{weight},bmi:{bmi}\n")
+print("bmi recorded")

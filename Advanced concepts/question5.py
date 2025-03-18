@@ -1,0 +1,5 @@
+f=open("fifth.txt","r")
+f1=f.read()
+crct=f1.replace("langauge","language")
+f=open("fifth.txt","w")
+f.write(crct)

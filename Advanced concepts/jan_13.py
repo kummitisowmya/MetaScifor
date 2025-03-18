@@ -1,0 +1,7 @@
+f=open("jan13.txt","r")
+text=f.read()
+sentences=text.split('.')
+total_sentences = sum(1 for sentence in sentences if sentence.strip())
+start_with_A = sum(1 for sentence in sentences if sentence.strip().startswith('A'))
+print("Total number of sentences:", total_sentences)
+print("No of sentences starting with A:",start_with_A)
