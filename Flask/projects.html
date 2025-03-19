@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <h1>My Projects</h1>
+
+    <div class="projects-container">
+
+        <!-- Student Management System -->
+        <div class="project-card">
+            <h2>Student Management System</h2>
+            <p>A Django-based web application that helps educational institutions manage student records efficiently.</p>
+            <ul>
+                <li>Student registration & login</li>
+                <li>Course Enrollments</li>
+                <li>Course Related Materials Download</li>
+                <li>Admin dashboard</li>
+            </ul>
+
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>A Flask-based portfolio showcasing my skills, projects, and contact details.</p>
+            <ul>
+                <li>Modern UI design</li>
+                <li>Project showcase section</li>
+                <li>Fully responsive layout</li>
+                <li>Contact form with email integration</li>
+            </ul>
+
+        </div>
+
+    </div>
+{% endblock %}
