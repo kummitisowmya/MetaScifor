@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image }}" width="200">
+    <p>Price: ₹{{ product.price }}</p>
+
+    <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post">
+        <button type="submit">Add to Cart</button>
+    </form>
+
+    <a href="{{ url_for('products') }}"><button>Back to Products</button></a>
+</body>
+</html>

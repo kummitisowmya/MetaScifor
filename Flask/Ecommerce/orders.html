@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        .order { border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .btn { display: inline-block; padding: 10px; text-align: center; background: blue; color: white; text-decoration: none; border-radius: 5px; }
+        .btn:hover { background: darkblue; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Order History</h2>
+
+    {% if orders %}
+        {% for order in orders %}
+            <div class="order">
+                <h3>Order Total: ₹{{ order.total }}</h3>
+                <ul>
+                    {% for item in order.cart %}
+                        <li>{{ item.name }} (x{{ item.quantity }}) - ₹{{ item.price * item.quantity }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No orders placed yet.</p>
+    {% endif %}
+
+    <br>
+    <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+</div>
+
+</body>
+</html>
